@@ -1,0 +1,75 @@
+/* UpdatePost.css */
+.update-post-container {
+  padding: 50px;
+  background-color: #f7f7f7; /* Slightly lighter white background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-post-container h2 {
+  font-size: 2.5rem;
+  color: #444; /* Softer dark gray for a modern look */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.update-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 70px 50px; /* Reduced horizontal padding for a sleeker design */
+  border-radius: 15px; /* Increased border-radius for a modern look */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
+  margin-top: -80px; /* Raised card higher */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.update-post-form:hover {
+  transform: translateY(-10px); /* Adds a slight hover effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.update-post-form input,
+.update-post-form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.update-post-form input:focus,
+.update-post-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.update-post-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.update-post-form button {
+  padding: 15px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-post-form button:hover {
+  background-color: #2980b9;
+}
+
+.update-post-form button:active {
+  background-color: #21618c;
+}

@@ -1,0 +1,80 @@
+/* CreatePost CSS */
+.create-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Reduced padding for simplicity */
+  background-color: #f9f9f9; /* Light neutral background */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.create-post-container h2 {
+  color: #333; /* Dark gray for better readability */
+  font-size: 2.2rem; /* Slightly reduced size for balance */
+  margin-bottom: 20px; /* Smaller spacing for compact design */
+  font-family: 'Roboto', sans-serif;
+}
+
+.create-post-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centered content */
+  width: 100%;
+  max-width: 400px; /* Slightly wider form */
+  background-color: #ffffff; /* Clean white form background */
+  padding: 40px; /* Reduced padding for cleaner look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 12px; /* Rounded corners for a modern feel */
+  margin-top: -30px; /* Lifted higher on the page */
+}
+
+.create-post-container input[type="text"],
+.create-post-container textarea {
+  width: 100%;
+  padding: 12px; /* Reduced padding inside input fields */
+  margin: 12px 0; /* Adjusted margin for better spacing */
+  font-size: 1.1rem; /* Slightly smaller font size */
+  border: 1px solid #ddd; /* Lighter border for simplicity */
+  border-radius: 6px; /* Softer rounded edges */
+  transition: border-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.create-post-container input[type="text"]:focus,
+.create-post-container textarea:focus {
+  border-color: #3498db; /* Light blue border on focus */
+  outline: none;
+}
+
+.create-post-container textarea {
+  min-height: 120px; /* Reduced height for cleaner design */
+  resize: vertical;
+}
+
+.create-post-container button {
+  width: 100%; /* Full-width button for better alignment */
+  padding: 12px; /* Consistent padding with inputs */
+  background-color: #3498db; /* Professional blue for the button */
+  color: #ffffff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px; /* Consistent with inputs */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+}
+
+.create-post-container button:hover {
+  background-color: #2980b9; /* Darker hover color */
+}
+
+.create-post-container button:active {
+  background-color: #21618c;
+}
+
+.create-post-container input[type="text"]::placeholder,
+.create-post-container textarea::placeholder {
+  color: #999; /* Lighter placeholder color */
+}
