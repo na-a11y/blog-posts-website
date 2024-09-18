@@ -1,7 +1,7 @@
 /* UpdatePost.css */
 .update-post-container {
-  padding: 50px;
-  background-color: #f7f7f7; /* Slightly lighter white background */
+  padding: 50px 20px; /* Added padding for top and sides */
+  background-color: #f0f4f8; /* Light blue-gray background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,67 +9,89 @@
 }
 
 .update-post-container h2 {
-  font-size: 2.5rem;
-  color: #444; /* Softer dark gray for a modern look */
-  margin-bottom: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: #333; /* Darker gray for a clean, modern look */
+  margin-bottom: 40px; /* Spacing below heading */
+  font-family: 'Poppins', sans-serif; /* Professional, modern font */
+  text-align: center;
+  margin-top: 0; /* Ensures no additional margin at the top */
+  z-index: 1; /* Ensures the heading stays on top */
 }
 
 .update-post-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* Wider form for better spacing */
   background-color: #fff;
-  padding: 70px 50px; /* Reduced horizontal padding for a sleeker design */
-  border-radius: 15px; /* Increased border-radius for a modern look */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
-  margin-top: -80px; /* Raised card higher */
+  padding: 50px;
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Clean shadow for elegance */
+  margin-top: -20px; /* Adjusted margin to bring it closer to the heading */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .update-post-form:hover {
-  transform: translateY(-10px); /* Adds a slight hover effect */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
 }
 
 .update-post-form input,
 .update-post-form textarea {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 15px;
-  font-size: 1.2rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 100%;
-  transition: border-color 0.3s ease;
+  font-size: 1.1rem;
+  border: 1px solid #ccd1d9; /* Softer border color */
+  border-radius: 8px; /* More rounded input fields */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .update-post-form input:focus,
 .update-post-form textarea:focus {
   border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Subtle glow effect on focus */
   outline: none;
 }
 
 .update-post-form textarea {
   resize: vertical;
-  height: 150px;
+  height: 200px; /* Increased height for content input */
 }
 
 .update-post-form button {
   padding: 15px;
   background-color: #3498db;
-  color: #fff;
+  color: white;
   font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .update-post-form button:hover {
   background-color: #2980b9;
+  transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 .update-post-form button:active {
   background-color: #21618c;
+}
+
+img {
+  margin-bottom: 20px;
+  border-radius: 8px; /* Rounded corners for the image */
+  max-width: 100%; /* Ensures image is responsive */
+  max-height: 250px; /* Adjusted max-height for a balanced look */
+  object-fit: cover; /* Ensures the image covers the area nicely */
+}
+
+@media (max-width: 600px) {
+  .update-post-form {
+    padding: 30px;
+  }
+
+  .update-post-container h2 {
+    font-size: 1.8rem;
+  }
 }

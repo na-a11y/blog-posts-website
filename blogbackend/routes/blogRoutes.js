@@ -8,14 +8,10 @@ const fs = require('fs');
 // Setup multer for image uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadPath = 'uploads/';
-    if (!fs.existsSync(uploadPath)) {
-      fs.mkdirSync(uploadPath, { recursive: true });
-    }
-    cb(null, uploadPath);
+    cb(null, 'uploads/');  // Save files to 'uploads' directory
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname)); // Append the current date to the filename
+    cb(null, Date.now() + path.extname(file.originalname));  // Append timestamp to file
   }
 });
 
@@ -29,13 +25,12 @@ router.post('/create', upload.single('image'), async (req, res) => {
       title,
       content,
       author,
-      image: req.file ? req.file.filename : null // Save image file name if uploaded
+      image: req.file ? req.file.filename : null  // Save the filename
     });
     
     await newPost.save();
     res.status(201).json(newPost);
   } catch (error) {
-    console.error('Error creating post:', error);
     res.status(400).json({ error: error.message });
   }
 });

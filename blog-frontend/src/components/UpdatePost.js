@@ -53,9 +53,9 @@ const UpdatePost = () => {
     <div className="update-post-container">
       <h2>Update Post</h2>
       <form onSubmit={handleSubmit} className="update-post-form">
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
-        <textarea value={content} onChange={(e) => setContent(e.target.value)} required></textarea>
-        <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder='title' required />
+        <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder='content' required></textarea>
+        <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder='author' required />
         
         {currentImage && (
           <div>

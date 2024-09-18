@@ -31,13 +31,15 @@ const PostDetail = () => {
         <h1 className="post-title">{post.title}</h1>
         <p className="author">By: {post.author}</p>
         <p className="post-content">{post.content}</p>
+        
+        {/* Display the image if it exists */}
         {post.image && (
           <img
-            src={`http://localhost:5000/uploads/${post.image}`}
+            src={`http://localhost:5000/uploads/${post.image}`}  // Access the image via the uploads route
             alt="Post"
-            style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}
           />
         )}
+        
         <div className="post-footer">
           <Link to={`/update/${post._id}`} className="btn">Edit Post</Link>
           <button onClick={handleDelete}>Delete Post</button>
