@@ -4,8 +4,6 @@ const cors = require('cors');
 require('dotenv').config();
 const blogRoutes = require('./routes/blogRoutes');
 
-
-
 // Initialize Express
 const app = express();
 
